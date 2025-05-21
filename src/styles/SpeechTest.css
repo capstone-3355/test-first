@@ -1,0 +1,122 @@
+/* src/styles/SpeechTest.css */
+.card {
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 20px 20px 0 20px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+    min-height: 240px;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #333333;
+    margin: 13px 0 15px 0;
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+}
+
+.card p {
+    color: #818181;
+    font-size: 15px;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.card img {
+    width: 120px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.card:hover h3 {
+    color: #1c49ff;
+}
+
+.card-1 img {
+    width: 140px;
+}
+
+.card.disabled {
+    background-color: #f0f0f0;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.card.disabled:hover {
+    transform: none;
+}
+
+.card.disabled h3 {
+    color: #666;
+}
+
+/* 태블릿 (768px ~ 1279px) */
+@media (max-width: 1279px) {
+    .card {
+        min-height: 200px;
+        width: 200px;
+        padding: 15px 15px 0 15px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        margin: 10px 0 12px 0;
+    }
+
+    .card p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .card img {
+        width: 100px;
+    }
+
+    .card-1 img {
+        width: 120px;
+    }
+}
+
+/* 모바일 (767px 이하) */
+@media (max-width: 767px) {
+    .card {
+        min-height: 180px;
+        width: 100%;
+        max-width: 300px;
+        padding: 10px 10px 0 10px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+        margin: 8px 0 10px 0;
+    }
+
+    .card p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .card img {
+        width: 80px;
+    }
+
+    .card-1 img {
+        width: 100px;
+    }
+}

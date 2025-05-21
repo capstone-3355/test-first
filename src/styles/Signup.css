@@ -1,0 +1,71 @@
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #333;
+    gap: 40px; /* 로고와 회원가입 폼 사이의 간격을 늘림 */
+}
+
+.signup-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.signup-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.signup-container input[type="text"],
+.signup-container input[type="password"],
+.signup-container input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.signup-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #069ded;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.signup-container button:hover {
+    background-color: #1293cd;
+}
+
+/* 오류 메시지 스타일 */
+.error-message {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    margin-top: -8px; /* 오류 메시지를 필드와 가까운 곳에 위치시킴 */
+    margin-bottom: 15px; /* 오류 메시지와 폼 사이에 공간을 조금 더 띄움 */
+}
+
+/* 모바일 및 작은 화면에서 로고와 폼 간격 조정 */
+@media (max-width: 768px) {
+    .signup-page {
+        gap: 20px; /* 작은 화면에서는 간격을 적당히 조정 */
+    }
+}

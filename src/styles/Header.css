@@ -1,0 +1,205 @@
+/* src/styles/HomePage.css */
+.home-page {
+    width: 100%; /* 화면 끝까지 이어지도록 설정 */
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 헤더를 선으로 변경 */
+.home-header {
+    width: 100%;
+    border-bottom: 1px solid #e6e5e5; /* 회색 선 */
+    padding: 20px 0; /* 상하 패딩 조정 */
+}
+
+/* 로고와 링크를 포함하는 콘텐츠 */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px; /* 좌우 패딩을 10px로 설정 */
+}
+
+/* 로고를 왼쪽으로 최대한 붙임 */
+.header-content .logo {
+    margin-left: 0; /* 기본 마진 제거 */
+}
+
+/* 로그인/회원가입 링크 스타일 */
+.auth-links {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 링크 간 간격 조정 */
+}
+
+/* 구분선 스타일 */
+.divider {
+    color: #ccc; /* 회색 구분선 */
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.auth-link {
+    color: #4e4e4e;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-link:hover {
+    background-color: #f0f0f0;
+    color: #4e4e4e;
+}
+
+.user-text {
+    color: #1c49ff;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+    width: 100%;
+    background-color: #fff; /* 콘텐츠 배경도 하얀색 */
+}
+
+/* 발음교정은 스타일 */
+.home-content h1 {
+    font-size: 64px;
+    font-weight: bold;
+    color: #333;
+    margin-top: -60px;
+    margin-bottom: 10px; /* 아래 텍스트와의 간격 조정 */
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* 발음,바름과 함께! 스타일 */
+.sub-title {
+    font-size: 48px; /* 첫 줄보다 작은 크기 */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+/* 발음,바름 색상 변경 */
+.signature-color {
+    color: #333; /* 초기 색상: 검은색 */
+    transition: color 3s ease-in-out; /* 색상 변경 애니메이션 */
+}
+
+.signature-color.active {
+    color: #1c49ff; /* 변경 색상: 파란색 */
+}
+
+/* 서브 텍스트 스타일링 */
+.sub-text {
+    font-size: 14px; /* 스크린샷처럼 더 작게 */
+    font-weight: bold;
+    color: #666; /* 회색 */
+    margin-bottom: 30px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.start-button {
+    background-color: #1c49ff;
+    color: #fff;
+    border: none;
+    padding: 24px 32px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #153ed9;
+}
+
+/* 태블릿 (768px ~ 1279px) */
+@media (max-width: 1279px) {
+    .home-header {
+        padding: 15px 0;
+    }
+
+    .auth-links {
+        gap: 8px;
+    }
+
+    .auth-link, .user-text {
+        font-size: 14px;
+    }
+
+    .divider {
+        font-size: 14px;
+    }
+
+    .home-content h1 {
+        font-size: 48px; /* 태블릿 폰트 크기 조정 */
+    }
+
+    .sub-title {
+        font-size: 36px;
+    }
+
+    .sub-text {
+        font-size: 16px;
+    }
+
+    .start-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+/* 모바일 (767px 이하) */
+@media (max-width: 767px) {
+    .home-header {
+        padding: 10px 0;
+    }
+
+    .auth-links {
+        gap: 6px;
+    }
+
+    .auth-link, .user-text {
+        font-size: 12px;
+    }
+
+    .divider {
+        font-size: 12px;
+    }
+
+    .home-content h1 {
+        font-size: 36px; /* 모바일 폰트 크기 조정 */
+    }
+
+    .sub-title {
+        font-size: 28px;
+    }
+
+    .sub-text {
+        font-size: 14px;
+    }
+
+    .start-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}

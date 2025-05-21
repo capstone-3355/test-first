@@ -1,0 +1,29 @@
+/* src/styles/Logo.css */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.logo-text {
+    color: #333; /* 발음 색상: 검정 */
+}
+
+.logo-highlight {
+    color: #069ded; /* 바름 색상: 파란색 */
+}
+
+/* 태블릿 (768px ~ 1279px) */
+@media (max-width: 1279px) {
+    .logo {
+        font-size: 20px;
+    }
+}
+
+/* 모바일 (767px 이하) */
+@media (max-width: 767px) {
+    .logo {
+        font-size: 18px;
+    }
+}
