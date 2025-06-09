@@ -1,0 +1,112 @@
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding-top: 40px;
+    color: #333;
+}
+
+.signup-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    text-align: left;
+}
+
+.signup-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.logo-space {
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+    font-size: 14px;
+}
+
+/* 아이디 체크용 줄 정렬 */
+.id-check-row {
+    display: flex;
+    gap: 8px;
+}
+
+.id-check-row input {
+    flex: 1;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-error {
+    border-color: red;
+}
+
+/* 회색 버튼 스타일 */
+.id-check-button,
+.submit-button {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.id-check-button:hover,
+.submit-button:hover {
+    background-color: #ccc;
+}
+
+/* 중복확인 메시지 */
+.id-check-message {
+    font-size: 13px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+.id-check-message.available {
+    color: green;
+}
+
+.id-check-message.taken {
+    color: red;
+}
+
+.id-check-message.error {
+    color: darkred;
+}
+
+/* 에러 메시지 */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.logo-space {
+    margin-bottom: 20px;
+}

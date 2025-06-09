@@ -1,0 +1,292 @@
+/* ====== 기본 스타일 ====== */
+.main-page {
+    font-family: 'Apple SD Gothic Neo', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    min-height: 100vh;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 60px;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-text {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.header-text .greeting {
+    font-size: 19px;
+    margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+}
+
+.header-text .greeting .highlight {
+    color: #069ded;
+}
+
+.header-text .main-text {
+    color: #3a3a3a;
+    font-size: 23px;
+    margin: 10px 0 0 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffcd6c;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-text {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: normal;
+}
+
+/* ====== 팝업 ====== */
+.profile-popup {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    width: 220px;
+    z-index: 10;
+}
+
+.popup-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.popup-profile-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffcd6c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-user-name {
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.popup-user-email {
+    font-size: 14px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #666;
+    margin: 2px 0 0 0;
+}
+
+.popup-divider {
+    border: none;
+    border-top: 1px solid #e6e5e5;
+    margin: 10px 0;
+}
+
+.popup-link {
+    display: block;
+    font-size: 14px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #333;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.popup-link:hover {
+    color: #069ded;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    padding: 5px 0;
+    font-size: 14px;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #333;
+}
+
+.logout-button:hover {
+    color: #069ded;
+}
+
+/* ====== 카드 컨테이너 ====== */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 0px 30px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-top: -10px;
+    flex-grow: 1;
+}
+
+/* ====== 카드 스타일 ====== */
+.card {
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 25px 25px 0 25px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+    min-height: 280px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-decoration: none; /* ✅ 링크일 경우 대비 */
+    color: inherit;         /* ✅ 링크 색 제거 */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #333333;
+    margin: 15px 0 18px 0;
+    font-size: 22px;
+    text-align: left;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+}
+
+.card p {
+    color: #818181;
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.card img {
+    width: 180px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.card:hover h3 {
+    color: #ffcb2d;
+}
+
+.card-1 img {
+    width: 160px;
+}
+
+/* ✅ 링크 스타일 완전 제거 */
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.card a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.card * {
+    text-decoration: none !important;
+}
+
+/* ====== 반응형 ====== */
+@media (max-width: 1040px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        max-height: none;
+    }
+    .card {
+        margin: 0 auto;
+    }
+    .profile {
+        width: 45px;
+        height: 45px;
+    }
+    .profile-text {
+        font-size: 14px;
+    }
+    .profile-popup {
+        width: 200px;
+        top: 55px;
+        right: -20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile {
+        width: 40px;
+        height: 40px;
+    }
+    .profile-text {
+        font-size: 12px;
+    }
+    .profile-popup {
+        width: 180px;
+        top: 50px;
+        right: -40px;
+    }
+    .popup-profile-circle {
+        width: 35px;
+        height: 35px;
+    }
+    .popup-user-name {
+        font-size: 14px;
+    }
+    .popup-user-email {
+        font-size: 12px;
+    }
+    .popup-link, .logout-button {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,122 @@
+.category-layout {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    padding: 60px 80px;
+    background: #ffffff;
+    box-sizing: border-box;
+    font-family: 'Nanum Gothic', sans-serif;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.intro-text {
+    flex: 1;
+    min-width: 240px;
+}
+
+.intro-text .sub {
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.intro-text .headline {
+    font-size: 36px;
+    font-weight: 800;
+    color: #111;
+    line-height: 1.4;
+    white-space: pre-line;
+}
+
+.category-grid {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.category-card {
+    width: 160px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+}
+
+.category-card .label {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.category-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.preview {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.key {
+    background: #f0f0f0;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* 반응형 대응 */
+@media (max-width: 768px) {
+    .category-layout {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 40px;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
+
+    .intro-text .headline {
+        font-size: 28px;
+    }
+
+    .category-grid {
+        justify-content: center;
+    }
+}
+/* ✅ 뒤로가기 버튼 */
+.back-button {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    background: none;
+    border: none;
+    color: #6b7280;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Nanum Gothic', sans-serif;
+    transition: color 0.2s;
+}
+
+.back-button:hover {
+    color: #3B82F6;
+}

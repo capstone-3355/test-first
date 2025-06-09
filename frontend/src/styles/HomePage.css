@@ -1,0 +1,360 @@
+.home-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* 헤더를 선으로 변경 */
+.home-header {
+    width: 100%;
+    border-bottom: 1px solid #e6e5e5;
+    padding: 20px 0;
+}
+
+/* 로고와 링크를 포함하는 콘텐츠 */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* 로고를 왼쪽으로 최대한 붙임 */
+.header-content .logo {
+    margin-left: 0;
+}
+
+/* 로고 스타일 */
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #333;
+}
+
+.logo-highlight {
+    color: #069ded;
+}
+
+/* 로그인/회원가입 링크 스타일 */
+.auth-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 구분선 스타일 */
+.divider {
+    color: #ccc;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.auth-link {
+    color: #4e4e4e;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-link:hover {
+    background-color: #f0f0f0;
+    color: #4e4e4e;
+}
+
+/* 노란색 동그라미 프로필 */
+.profile-circle {
+    width: 48px;
+    height: 48px;
+    background-color: #f6d598;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 프로필 텍스트 */
+.profile-text {
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: normal;
+}
+
+.home-content {
+    display: flex;
+    flex: 1;
+    position: relative;
+    padding: 40px 20px;
+}
+
+/* 텍스트 콘텐츠 래퍼 */
+.content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: -120px auto 0; /* 텍스트를 아래로 내림 (기존 -150px) */
+}
+
+/* 텍스트 콘텐츠 */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* 제목, 서브텍스트 블록, 시작하기 버튼 사이 간격 */
+    margin-left: 0;
+    padding-left: 30px;
+    text-align: left;
+}
+
+/* 발음,바름 스타일 */
+.home-content h1 {
+    font-size: 74px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Nanum Gothic', sans-serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    margin-left: -10px;
+}
+
+/* 하이라이트 래퍼 */
+.highlight-wrapper {
+    display: flex;
+    position: relative;
+}
+
+/* 각 문자 래퍼 */
+.char-wrapper {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 각 문자 */
+.char {
+    color: #333;
+}
+
+/* 장식용 원 */
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #069ded;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 서브 텍스트 컨테이너 */
+.sub-text-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.5; /* 서브 텍스트 두 줄 사이 간격 */
+    margin: 0;
+}
+
+/* 서브 텍스트 스타일링 */
+.sub-text {
+    font-size: 25px !important;
+    font-weight: 100!important;
+    color: rgba(165, 165, 165, 0.9) !important;
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 0;
+}
+
+/* 바로 시작하기 링크 */
+.start-link {
+    color: #069ded;
+    text-decoration: none;
+    font-size: 23px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 200;
+    position: relative;
+    margin: 0;
+    display: inline-block;
+}
+
+.start-link:hover {
+    color: rgba(6, 157, 237, 0.76);
+}
+
+.start-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #069ded;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.start-link:hover::after {
+    width: 50%;
+}
+
+/* 이미지 콘텐츠 */
+.image-content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* 캐릭터 이미지 */
+.character-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* 태블릿 (768px ~ 1279px) */
+@media (max-width: 1279px) {
+    .home-header {
+        padding: 15px 0;
+    }
+
+    .auth-links {
+        gap: 8px;
+    }
+
+    .auth-link {
+        font-size: 14px;
+    }
+
+    .divider {
+        font-size: 14px;
+    }
+
+    .profile-circle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .profile-text {
+        font-size: 12px;
+    }
+
+    .content-wrapper {
+        margin-top: -20px; /* 태블릿에서도 텍스트를 아래로 내림 (기존 -30px) */
+    }
+
+    .text-content {
+        gap: 20px;
+        padding-left: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 60px;
+        margin-left: -8px;
+    }
+
+    .sub-text {
+        font-size: 28px !important;
+    }
+
+    .start-link {
+        font-size: 20px;
+    }
+
+    .circle {
+        width: 8px;
+        height: 8px;
+        top: -15px;
+    }
+
+    .image-content {
+        width: 40%;
+        height: 80%;
+    }
+}
+
+/* 모바일 (767px 이하) */
+@media (max-width: 767px) {
+    .home-header {
+        padding: 10px 0;
+    }
+
+    .auth-links {
+        gap: 6px;
+    }
+
+    .auth-link {
+        font-size: 12px;
+    }
+
+    .divider {
+        font-size: 12px;
+    }
+
+    .profile-circle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .profile-text {
+        font-size: 11px;
+    }
+
+    .content-wrapper {
+        margin-top: -10px; /* 모바일에서도 텍스트를 아래로 내림 (기존 -20px) */
+    }
+
+    .text-content {
+        gap: 15px;
+        padding-left: 15px;
+    }
+
+    .home-content h1 {
+        font-size: 48px;
+        margin-left: -5px;
+    }
+
+    .sub-text {
+        font-size: 24px !important;
+    }
+
+    .start-link {
+        font-size: 18px;
+    }
+
+    .circle {
+        width: 6px;
+        height: 6px;
+        top: -10px;
+    }
+
+    .image-content {
+        position: static;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .character-image {
+        width: 80%;
+        height: auto;
+    }
+}
