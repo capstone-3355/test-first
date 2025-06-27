@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Logo } from '../components/index.js';
+import { Logo } from '../components';
 import '../styles/Signup.css';
 
 const SignupPage = () => {
